@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+  <h2>LOGIN</h2>
+<form onsubmit="return checkPassword()">
+  <input type="text" placeholder="Username" required><br><br>
+  <input type="password" id="password" placeholder="Password" required><br><br>
+  <a href="#">Forgot Password?</a><br><br>
+  <button type="submit">Login</button>
+</form>
+
+<script>
+  function checkPassword() {
+    const entered = document.getElementById("password").value;
+    const correct = "Balu@143";
+    if (entered !== correct) {
+      alert("Wrong password");
+      return false;
+    }
+    // Redirect to another page if password is correct
+    window.location.href = "../home page/index.html";
+    return false; // Prevent default form submission
+  }
+</script>
+</body>
+</html>
